@@ -19,6 +19,7 @@ namespace ctopy {
 	}
 
 	void CToPy::start(void) {
+		count.store(0);
 		tBegin = std::chrono::system_clock::now();
 	}
 
