@@ -40,3 +40,25 @@ namespace ctopy {
 		return ns.count() / count.load();
 	}
 }
+
+namespace ctopy {
+	void Access(void) {
+		CToPy::getInstance().access();
+	}
+
+	void Start(void) {
+		CToPy::getInstance().start();
+	}
+
+	void End(void) {
+		CToPy::getInstance().end();
+	}
+
+	uint64_t GetElapsedTime(void) {
+		return CToPy::getInstance().getElapsedTime();
+	}
+
+	double GetElapsedTimePerAccess(void) {
+		return CToPy::getInstance().getElapsedTimePerAccess();
+	}
+}

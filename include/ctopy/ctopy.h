@@ -6,6 +6,7 @@
 #include <stdint.h>
 
 namespace ctopy {
+	// cpp type interface
 	class CToPy {
 	private:
 		static CToPy instance;
@@ -28,5 +29,12 @@ namespace ctopy {
 		CToPy(void);
 		~CToPy(void);
 	};
+	
+	// c type interface
+	void Access(void);
+	void Start(void);
+	void End(void);
+	uint64_t GetElapsedTime(void);
+	double GetElapsedTimePerAccess(void);
 }
 #endif
