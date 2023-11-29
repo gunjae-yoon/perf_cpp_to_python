@@ -6,7 +6,7 @@
 git clone https://github.com/gunjae-yoon/perf_cpp_to_python --depth 1
 ```
 
-### Step 2-1. create a library by PyBinder11
+### Step 2-1. create a library by PyBind11
 ```bash
 cd perf_cpp_to_python
 mkdir build
