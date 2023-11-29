@@ -29,12 +29,13 @@ namespace ctopy {
 		CToPy(void);
 		~CToPy(void);
 	};
-	
-	// c type interface
-	void Access(void);
-	void Start(void);
-	void End(void);
-	uint64_t GetElapsedTime(void);
-	double GetElapsedTimePerAccess(void);
+}
+
+extern "C" {
+	void c_access(void);
+	void c_start(void);
+	void c_end(void);
+	uint64_t c_get_elapsed_time(void);
+	double c_get_elapsed_time_per_access(void);
 }
 #endif

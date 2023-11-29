@@ -2,25 +2,25 @@
 from libcpp cimport bool
 from libcpp.string cimport string
 
-cdef extern from 'ctopy/ctopy.h' namespace 'ctopy':
-	void Access()
-	void Start()
-	void End()
-	unsigned long long GetElapsedTime()
-	double GetElapsedTimePerAccess()
+cdef extern from 'ctopy/ctopy.h':
+	void c_access()
+	void c_start()
+	void c_end()
+	unsigned long long c_get_elapsed_time()
+	double c_get_elapsed_time_per_access()
 
 cdef class CToPy:
 	def access(self):
-		Access()
+		c_access()
 	
 	def start(self):
-		Start()
+		c_start()
 
 	def end(self):
-		End()
+		c_end()
 	
 	def get_elapsed_time(self):
-		return GetElapsedTime()
+		return c_get_elapsed_time()
 	
 	def get_elapsed_time_per_access(self):
-		return GetElapsedTimePerAccess()
+		return c_get_elapsed_time_per_access()

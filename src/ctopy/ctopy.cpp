@@ -42,24 +42,24 @@ namespace ctopy {
 	}
 }
 
-namespace ctopy {
-	void Access(void) {
-		CToPy::getInstance().access();
+extern "C" {
+	void c_access(void) {
+		ctopy::CToPy::getInstance().access();
 	}
 
-	void Start(void) {
-		CToPy::getInstance().start();
+	void c_start(void) {
+		ctopy::CToPy::getInstance().start();
 	}
 
-	void End(void) {
-		CToPy::getInstance().end();
+	void c_end(void) {
+		ctopy::CToPy::getInstance().end();
 	}
 
-	uint64_t GetElapsedTime(void) {
-		return CToPy::getInstance().getElapsedTime();
+	uint64_t c_get_elapsed_time(void) {
+		return ctopy::CToPy::getInstance().getElapsedTime();
 	}
 
-	double GetElapsedTimePerAccess(void) {
-		return CToPy::getInstance().getElapsedTimePerAccess();
+	double c_get_elapsed_time_per_access(void) {
+		return ctopy::CToPy::getInstance().getElapsedTimePerAccess();
 	}
 }
